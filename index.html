@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Samba | Cybersecurity Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Cybersecurity Specialist Portfolio - Vulnerability Assessment, Malware Analysis, Secure Tool Development">
+  <link rel="stylesheet" href="assets/style.css">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="assets/script.js" defer></script>
+</head>
+
+<body oncontextmenu="return false;">
+  <!-- Floating Icons Container -->
+  <div id="floating-icons" class="floating-icons-container" aria-hidden="true"></div>
+
+  <!-- NAVBAR -->
+  <header class="navbar" role="banner">
+    <div class="logo" aria-label="Portfolio Logo">
+      <span class="logo-shield" aria-hidden="true">🛡️</span> Samba<span class="logo-dot"></span>
+    </div>
+
+    <nav class="nav-container" aria-label="Main Navigation">
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#internship" class="nav-link">Internships</a></li>
+        <li><a href="#certifications" class="nav-link">Certifications</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-extra">
+      <a href="#contact" class="btn hire-btn">Hire Me</a>
+      <button class="mobile-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false" aria-controls="nav-links">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ABOUT -->
+  <section id="home" class="home-section">
+    <div class="home-container">
+
+      <!-- LEFT CONTENT -->
+      <div class="home-content">
+        <h3 class="name">
+          M.<span> Samba Siva Rao</span>
+        </h3>
+
+        <h3 class="role">
+          <span>&gt;</span> Cybersecurity Specialist <span style="color: red;">(Red Team)</span>
+        </h3>
+
+        <p class="home-text">
+          I break things to make them stronger. Specializing in
+          <span>vulnerability testing</span>,
+          <span>malware analysis</span>,
+          <span>Web App Pentesting</span> and
+          <span>secure tool development</span>.
+          <br /><br />
+          My journey is hands-on <b>testing, breaking, and patching real systems</b>.
+        </p>
+
+        <div class="home-buttons">
+          <a href="#projects" class="btn primary">View My Work</a>
+        </div>
+
+        <!-- SOCIAL ICONS -->
+        <div class="hero-socials">
+          <!-- EMAIL -->
+          <a href="mailto:sambayadav12@email.com" aria-label="Email">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+
+          <!-- GITHUB -->
+          <a href="https://github.com/SambaSivaRao18" target="_blank" aria-label="GitHub">
+            <i class="fa-brands fa-github"></i>
+          </a>
+
+          <!-- LINKEDIN -->
+          <a href="https://linkedin.com/in/samba-siva-rao-12linked" target="_blank" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- RIGHT IMAGE -->
+      <div class="home-image">
+        <img src="assets/og-image.webp" alt="M. Samba Siva Rao" />
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ABOUT HERO HEADER -->
+  <section id="about" class="about-hero">
+    <div class="about-hero-content">
+      <span class="about-pill">About Me</span>
+
+      <h1 class="about-hero-title">
+        Breaking Barriers,
+        <span>Building Security</span>
+      </h1>
+    </div>
+  </section>
+
+  <!-- about section-->
+  <section class="about-section">
+    <div class="about-container">
+      <!-- LEFT : IMAGE -->
+      <div class="about-image">
+        <img src="assets/og-image.webp" alt="Profile Image">
+      </div>
+
+      <!-- RIGHT : CONTENT -->
+      <div class="about-content">
+        <p class="about-text">
+          I'm a <span class="highlight">cybersecurity student</span> at
+          <a href="https://www.pscmr.ac.in/" target="_blank"> Potti Sriramulu College</a>, Vijayawada, with a passion
+          for
+          understanding how systems break and how to protect them.
+        </p>
+
+        <p class="about-text">
+          My journey into security started with curiosity about how hackers
+          think. Now I spend my time conducting
+          <span class="blue">malware analysis</span>,
+          building <span class="green">secure Python tools</span>, and
+          performing <span class="blue">Vulnerability testing</span>
+          for clients.
+        </p>
+
+        <p class="about-text">
+          I believe in learning by doing testing, breaking, and patching
+          rather than just memorizing theory. Whether it's analyzing malware
+          samples, scanning for vulnerabilities, or building security tools,
+          I approach every challenge with hands-on intensity.
+        </p>
+
+        <!-- INFO CARDS -->
+        <div class="info-grid">
+          <div class="info-card">
+            <span class="info-icon"><i class="fas fa-map-marker-alt"></i></span>
+            <div>
+              <small>LOCATION</small>
+              <strong>Guntur(Dis), AP in India</strong>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <span class="info-icon"><i class="fas fa-graduation-cap"></i></span>
+            <div>
+              <small>EDUCATION</small>
+              <strong>B.Tech | Cyber Security</strong>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <span class="info-icon"><i class="fas fa-envelope"></i></span>
+            <div>
+              <small>EMAIL</small>
+              <strong>sambayadav121@email.com</strong>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <span class="info-icon"><i class="fas fa-phone"></i></span>
+            <div>
+              <small>PHONE</small>
+              <strong>+91 6302463508</strong>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- status bar-->
+  <div class="stats-wrapper">
+    <div class="stats-card">
+
+      <div class="stat-item">
+        <div class="stat-number">2</div>
+        <div class="stat-label">Projects</div>
+      </div>
+
+      <div class="stat-item">
+        <div class="stat-number">2</div>
+        <div class="stat-label">Internships</div>
+      </div>
+
+      <div class="stat-item">
+        <div class="stat-number">4</div>
+        <div class="stat-label">Certifications</div>
+      </div>
+
+      <div class="stat-item">
+        <div class="stat-number">12</div>
+        <div class="stat-label">Rooms in TryHackMe</div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- SKILLS -->
+  <section id="skills" class="skills-page-wrapper">
+
+    <div class="skills-header">
+      <h2>Skills & <span>Expertise</span></h2>
+      <p>
+        Tools and technologies I use to analyze threats,
+        find vulnerabilities, and build secure solutions.
+      </p>
+    </div>
+
+    <div class="grid">
+
+      <div class="skill-box">
+        <div class="skill-header">
+          <div class="skill-left">
+            <span class="icon">🐍</span>
+            <span class="skill-name">Python</span>
+          </div>
+          <span class="skill-percent">80%</span>
+        </div>
+        <div class="skill-bar">
+          <span style="width:90%"></span>
+        </div>
+      </div>
+
+      <div class="skill-box">
+        <div class="skill-header">
+          <div class="skill-left">
+            <span class="icon">&gt;_</span>
+            <span class="skill-name">Shell Scripting</span>
+          </div>
+          <span class="skill-percent">85%</span>
+        </div>
+        <div class="skill-bar">
+          <span style="width:0%"></span>
+        </div>
+      </div>
+
+      <div class="skill-box">
+        <div class="skill-header">
+          <div class="skill-left">
+            <span class="icon">☕</span>
+            <span class="skill-name">Java</span>
+          </div>
+          <span class="skill-percent">60%</span>
+        </div>
+        <div class="skill-bar">
+          <span style="width:0%"></span>
+        </div>
+      </div>
+
+      <div class="skill-box">
+        <div class="skill-header">
+          <div class="skill-left">
+            <span class="icon">🚩</span>
+            <span class="skill-name">OWASP ZAP</span>
+          </div>
+          <span class="skill-percent">75%</span>
+        </div>
+        <div class="skill-bar">
+          <span style="width:75%"></span>
+        </div>
+      </div>
+
+      <div class="skill-box">
+        <div class="skill-header">
+          <div class="skill-left">
+            <span class="icon">🔍</span>
+            <span class="skill-name">Vulnerability Scanning</span>
+          </div>
+          <span class="skill-percent">80%</span>
+        </div>
+        <div class="skill-bar">
+          <span style="width:75%"></span>
+        </div>
+      </div>
+
+      <div class="skill-box">
+        <div class="skill-header">
+          <div class="skill-left">
+            <span class="icon">🌐</span>
+            <span class="skill-name">Web App Penetration Testing</span>
+          </div>
+          <span class="skill-percent">75%</span>
+        </div>
+        <div class="skill-bar">
+          <span style="width:75%"></span>
+        </div>
+      </div>
+
+      <div class="skill-box">
+        <div class="skill-header">
+          <div class="skill-left">
+            <span class="icon">⚠️</span>
+            <span class="skill-name">Malware Analysis</span>
+          </div>
+          <span class="skill-percent">70%</span>
+        </div>
+        <div class="skill-bar">
+          <span style="width:90%"></span>
+        </div>
+      </div>
+
+      <div class="skill-box">
+        <div class="skill-header">
+          <div class="skill-left">
+            <span class="icon">&lt;/&gt;</span>
+            <span class="skill-name">HTML5 / CSS</span>
+          </div>
+          <span class="skill-percent">90%</span>
+        </div>
+        <div class="skill-bar">
+          <span style="width:0%"></span>
+        </div>
+      </div>
+
+      <div class="skill-box">
+        <div class="skill-header">
+          <div class="skill-left">
+            <span class="icon">{ }</span>
+            <span class="skill-name">JavaScript</span>
+          </div>
+          <span class="skill-percent">80%</span>
+        </div>
+        <div class="skill-bar">
+          <span style="width:75%"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tools-section">
+    <h2 class="tools-title">Security Tools</h2>
+
+    <div class="tools-list">
+      <span class="tool-pill">Burp Suite</span>
+      <span class="tool-pill">Gobuster</span>
+      <span class="tool-pill">sublister</span>
+      <span class="tool-pill">Nmap</span>
+      <span class="tool-pill">Nikto</span>
+      <span class="tool-pill">SQLMap</span>
+      <span class="tool-pill">Linux</span>
+      <span class="tool-pill">Nikto</span>
+      <span class="tool-pill">Metasploit</span>
+      <span class="tool-pill">Wireshark</span>
+      <span class="tool-pill">Hydra</span>
+      <span class="tool-pill">OWASP ZAP</span>
+      <span class="tool-pill">TheHavester</span>
+      <span class="tool-pill">Recon-NG</span>
+      <span class="tool-pill">subfinder</span>
+      <span class="tool-pill">ExploitDB</span>
+      <span class="tool-pill">Jhon The Ripper</span>
+      <span class="tool-pill">HashCat</span>
+      <span class="tool-pill">MobSF</span>
+      <span class="tool-pill">Mfvenom</span>
+    </div>
+  </section>
+
+
+
+  <!-- PROJECTS -->
+  <section id="projects" class="projects">
+    <div class="projects-header">
+      <h1>Complited <span>Projects</span></h1>
+      <p>
+        Security tools, automation, and research projects that
+        demonstrate my hands-on approach to cybersecurity.
+      </p>
+    </div>
+
+    <div class="projects-grid">
+
+      <!-- Project Card 1 -->
+      <div class="project-card">
+        <div class="project-links">
+          <a href="https://github.com/SambaSivaRao18/File_secure" target="_blank" class="project-link"
+            aria-label="GitHub Repository">
+            <i class="fab fa-github"></i>
+          </a>
+          <!--<a href="https://www.linkedin.com/in/samba-siva-rao-12linked" target="_blank" class="project-link linkedin"
+            aria-label="LinkedIn Profile">
+            <i class="fab fa-linkedin-in"></i>
+          </a>-->
+        </div>
+
+        <div class="project-icon blue">≡</div>
+
+        <h3> Secure File Encryption</h3>
+        <p class="description">
+          Built a secure file encryption and decryption tool to protect sensitive data
+          from unauthorized access and system compromise. The application
+          encrypts files using strong cryptographic algorithms and allows safe decryption
+          only with valid credentials or keys.
+        </p>
+
+        <ul class="features">
+          <li>Ensures data confidentiality even if a system is compromised</li>
+          <li>Protects sensitive data against system breaches</li>
+          <li>Encrypts and decrypts files using strong cryptographic techniques</li>
+        </ul>
+
+        <div class="tags">
+          <span>Python</span>
+          <span>cryptography</span>
+          <span>hashlib</span>
+          <span>AES-256</span>
+        </div>
+      </div>
+
+      <!-- Project Card 2 -->
+      <div class="project-card">
+        <div class="project-links">
+          <a href="https://www.linkedin.com/posts/samba-siva-rao-12linked_iot-engineering-arduino-activity-7395285941755740160-oTab?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFyR-RMBcllkAcCmvFvT3A9oegW2EF86p8Y"
+            target="_blank" class="project-link linkedin" aria-label="LinkedIn Post">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </div>
+
+        <div class="project-icon green">&gt;_</div>
+
+        <h3>IoT-Based Waste Collection Vehicle</h3>
+        <p class="description">
+          Designed and implemented a smart waste collection vehicle controlled
+          via a Bluetooth-enabled mobile application. The system integrates ESP32
+          and Arduino Uno to manage motor control, sensor input, and wireless communication.
+        </p>
+
+        <ul class="features">
+          <li>Sensor-driven automation</li>
+          <li>Embedded system communication</li>
+          <li>Practical IoT hardware integration</li>
+          <li>Bluetooth-based remote control</li>
+        </ul>
+
+        <div class="tags">
+          <span>ESP32</span>
+          <span>Motor Driver</span>
+          <span>Arduino Uno</span>
+          <span>Moisture Sensor</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!--futucr projects-->
+  <section class="future-projects">
+    <h2 class="section-title">Upcomming <span>Projects</span></h2>
+
+    <div class="projects-grid">
+
+      <article class="project-card">
+        <div class="icon pink">🔍</div>
+        <h3>Python Port Scanner</h3>
+        <p>
+          TCP port scanner using socket programming to identify open,
+          closed, and filtered ports for accurate network reconnaissance.
+        </p>
+        <span class="tech">Python • Socket • Network Security</span>
+      </article>
+
+      <article class="project-card">
+        <div class="icon orange">🧱</div>
+        <h3>WAF Evasion Tool</h3>
+        <p>
+          Built a WAF evaluation framework that analyzes filtering behavior
+          under encoded and normalized inputs, producing defensive hardening recommendations
+        </p>
+        <span class="tech">OWASP WAF • Packets Analysis • HTTP Header</span>
+      </article>
+
+      <article class="project-card">
+        <div class="icon gray">🔐</div>
+        <h3>Anti-Keylogger Monitor</h3>
+        <p>
+          Security tool to detect unauthorized keystroke activity. Monitors keyboard hook activitys for
+          suspicious patterns and generates real-time alerts.
+        </p>
+        <span class="tech">Monnitoring • Detection • Alerts</span>
+      </article>
+
+    </div>
+  </section>
+
+
+
+  <!-- EXPERIENCE -->
+
+  <section id="internship" class="experience">
+    <div class="exp-header">
+      <span class="badge">Career Journey</span>
+      <h2>Work <span>Internships</span></h2>
+      <p>
+        Real-world security experience through hands-on internships in malware
+        analysis and vulnerability assessment.
+      </p>
+    </div>
+
+    <div class="timeline">
+
+      <!-- LEFT CARD -->
+      <div class="timeline-item left">
+        <span class="dot"></span>
+
+        <div class="exp-card">
+          <span class="role-tag">Internship</span>
+          <h3>Malware Analysis Intern</h3>
+          <h4>SpyPro Solution Pvt. Ltd</h4>
+
+          <div class="meta">
+            <span>📅 May 2025 – June 2025</span>
+            <span>📍 Vijayawada</span>
+          </div>
+
+          <p class="summary">
+            Conducted in-depth analysis of malicious software to understand attack
+            vectors and develop defensive strategies.
+          </p>
+
+          <ul>
+            <li>Performed static and dynamic malware analysis on Windows and Android samples</li>
+            <li>Built expertise in diagnosing complex software and system breaches</li>
+            <li>Utilized sandbox labs and tools like Metasploit and YARA</li>
+            <li>Demonstrated strong problem resolution and threat detection skills</li>
+          </ul>
+
+          <div class="skills">
+            <span>Metasploit</span>
+            <span>YARA</span>
+            <span>Sandbox Labs</span>
+            <span>Static Analysis</span>
+            <span>Dynamic Analysis</span>
+            <span>MobSF</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT CARD -->
+      <div class="timeline-item right">
+        <span class="dot"></span>
+
+        <div class="exp-card">
+          <span class="role-tag green">Intermediate Internship</span>
+          <h3>Cybersecurity Intern</h3>
+          <h4>InternCertify (The Website Makers)</h4>
+
+          <div class="meta">
+            <span>📅 Jan 2025 – Apr 2025</span>
+            <span>📍 Remote</span>
+          </div>
+
+          <p class="summary">
+            Hands-on security testing experience focused on vulnerability scanning
+            and web application security.
+          </p>
+
+          <ul>
+            <li>Performed vulnerability scanning and web app testing in lab environments</li>
+            <li>Developed a diagnostic approach to identifying security flaws</li>
+            <li>Applied penetration testing methodologies to find weaknesses</li>
+            <li>Worked with industry-standard cybersecurity tools</li>
+          </ul>
+
+          <div class="skills">
+            <span>nmap</span>
+            <span>nikto</span>
+            <span>Burp Suite</span>
+            <span>Wireshark</span>
+            <span>SQLMap</span>
+            <span>Gobuster</span>
+            <span>OWSPA ZAP</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section id="certifications" class="certifications">
+    <div class="cert-header">
+      <h2>Certifications & <span>Licenses</span></h2>
+      <p>
+        Professional certifications and credentials that validate my
+        expertise in cybersecurity.
+      </p>
+    </div>
+
+    <div class="cert-grid">
+
+      <!-- Certificate 1 -->
+      <div class="cert-card">
+        <div class="cert-icon blue">
+          🛡️
+        </div>
+
+        <div class="cert-content">
+          <h3>Ethical Hacker</h3>
+          <h4> <a href="https://www.credly.com/badges/ed3ab4d7-7268-4a6d-89d1-a07952524d5a" target="_blank">Cisco</h4>
+          </a>
+          <p>Comprehensive ethical hacking and penetration testing certification</p>
+        </div>
+
+        <span class="verified"><i class="fas fa-check-circle"></i></span>
+      </div>
+
+      <!-- Certificate 2 -->
+      <div class="cert-card">
+        <div class="cert-icon green">
+          📜
+        </div>
+
+        <div class="cert-content">
+          <h3>NPTEL Certificate</h3>
+          <h4><a href="https://interncertify.com/a1-verified-certificate-original-samba-siva-rao/" target="_blank">
+              NPTEL</h4></a>
+          <p>National Programme on Technology Enhanced Learning certification</p>
+        </div>
+
+        <span class="verified"><i class="fas fa-check-circle"></i></span>
+      </div>
+
+      <!-- Certificate3 -->
+      <div class="cert-card">
+        <div class="cert-icon purple">
+          🧑🏼‍💼
+        </div>
+
+        <div class="cert-content">
+          <h3>Wadhwani</h3>
+          <h4><a href="https://web.certificate.wfglobal.org/en/certificate?certificateId=694c102ce148b98d90046744"
+              target="_blank"> Wadhwani</a></h4>
+          <p>certificate signifies that the recipient has acquired basic knowledge of concepts related to the
+            employability curriculum.</p>
+        </div>
+
+        <span class="verified"><i class="fas fa-check-circle"></i></span>
+      </div>
+
+      <!-- Certificate 4 -->
+      <div class="cert-card">
+        <div class="cert-icon orange">
+          🔬
+        </div>
+
+        <div class="cert-content">
+          <h3>Malware Analysis Internship</h3>
+          <h4>SpyPro Solutions</h4>
+          <p>Practical Web App pentesting and vulnerability assessment certification</p>
+        </div>
+
+        <span class="verified"><i class="fas fa-check-circle"></i></span>
+      </div>
+
+      <!-- Certificate 5 -->
+      <div class="cert-card">
+        <div class="cert-icon orange">
+          🔐
+        </div>
+
+        <div class="cert-content">
+          <h3>Cybersecurity Internship</h3>
+          <h4><a href="https://interncertify.com/a1-verified-certificate-original-samba-siva-rao/" target="_blank">
+              InternCertify</h4></a>
+          <p>Hands-on malware analysis and threat detection training</p>
+        </div>
+
+        <span class="verified"><i class="fas fa-check-circle"></i></span>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+    <div class="contact-header">
+      <span class="badge">Get in Touch</span>
+      <h2>Let's Work <span>Together</span></h2>
+      <p>
+        Open to client work and collaborative cybersecurity projects.
+        Let’s connect and explore how I can support and enhance your security initiatives.
+      </p>
+    </div>
+
+    <div class="contact-grid">
+
+      <!-- LEFT INFO -->
+      <div class="contact-info">
+
+        <div class="info-card">
+          <span class="icon"><i class="fas fa-envelope"></i></span>
+          <div>
+            <small>Email</small>
+            <p>sambayadav121@gmail.com</p>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <span class="icon"><i class="fas fa-phone"></i></span>
+          <div>
+            <small>Phone</small>
+            <p>+91 6302463508</p>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <span class="icon"><i class="fas fa-map-marker-alt"></i></span>
+          <div>
+            <small>Location</small>
+            <p>Guntur(Dis), AP in India</p>
+          </div>
+        </div>
+
+        <div class="socials">
+          <p>CONNECT WITH ME</p>
+          <div class="icons">
+            <a href="https://github.com/SambaSivaRao18" target="_blank" aria-label="GitHub"><i
+                class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/samba-siva-rao-12linked" target="_blank" aria-label="LinkedIn"><i
+                class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+
+        <div class="status-card">
+          <h4>&gt;_ Open to Opportunities</h4>
+          <p>
+            Open to client projects involving vulnerability scanning,
+            web application testing, and security assessments.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- RIGHT FORM -->
+      <div class="contact-form">
+        <form>
+          <div class="row">
+            <div>
+              <label>Your Name</label>
+              <input type="text" placeholder="Enter your Name" required />
+            </div>
+            <div>
+              <label>Your Email</label>
+              <input type="email" placeholder="Enter your email" required />
+            </div>
+          </div>
+
+          <label>Subject</label>
+          <input type="text" placeholder="clients work / Project Collaboration" />
+
+          <label>Message</label>
+          <textarea rows="5" placeholder="Tell me about your project or opportunity..."></textarea>
+
+          <button type="submit">
+            Send Message →
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="portfolio-footer">
+    <div class="footer-container">
+      <div class="footer-main">
+
+        <div class="footer-column brand-col">
+          <div class="footer-logo">
+            <div class="logo-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg>
+            </div>
+            <span class="logo-text">Samba<span class="cyan-text"></span></span>
+          </div>
+          <p class="footer-description">
+            Cybersecurity enthusiast with a strong focus on vulnerability assessment,
+            web application penetration testing, and building secure tools.
+          </p>
+        </div>
+
+        <div class="footer-column links-col">
+          <h3 class="column-title">Quick Links</h3>
+          <div class="footer-links">
+            <div class="link-group">
+              <a href="#home">Home</a>
+              <a href="#skills">Skills</a>
+              <a href="#experience">Experience</a>
+            </div>
+            <div class="link-group">
+              <a href="#about">About</a>
+              <a href="#projects">Projects</a>
+              <a href="#contact">Contact</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-column connect-col">
+          <h3 class="column-title">Connect</h3>
+          <div class="footer-socials">
+            <a href="https://github.com/SambaSivaRao18" target="_blank" class="social-box"><i
+                class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/samba-siva-rao-12linked" target="_blank" class="social-box"><i
+                class="fab fa-linkedin-in"></i></a>
+            <a href="mailto:sambayadav121@email.com" class="social-box"><i class="far fa-envelope"></i></a>
+          </div>
+          <p class="footer-email">sambayadav121@gmail.com</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright">© M. Samba Siva Rao. Built with <span class="heart">❤️</span></p>
+        <button class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+          Back to Top <i class="fas fa-arrow-up"></i>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
