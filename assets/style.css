@@ -113,6 +113,12 @@ section {
 
 .logo-dot {
   color: var(--primary);
+  font-weight: 800;
+}
+
+.red-text {
+  color: #ff4d4d !important;
+  font-weight: 600;
 }
 
 .nav-container {
@@ -289,6 +295,7 @@ section {
   font-weight: 800;
   line-height: 1.1;
   margin-bottom: 1rem;
+  animation: cardFloat 5s ease-in-out infinite;
 }
 
 
@@ -305,6 +312,8 @@ section {
   align-items: center;
   justify-content: inherit;
   gap: 0.5rem;
+  animation: cardFloat 5s ease-in-out infinite;
+  animation-delay: -2s;
 }
 
 .role span {
@@ -395,44 +404,17 @@ section {
     socialFloat 4s ease-in-out infinite;
 }
 
-/* ONE BY ONE — 1 SECOND DELAY */
-
+/* Staggered animation delays for entry */
 .hero-socials a:nth-child(1) {
-  animation-delay: 1.1s;
+  animation-delay: 1.1s, 0.8s;
 }
 
 .hero-socials a:nth-child(2) {
-  animation-delay: 1.5s;
-}
-
-.hero-socials a:nth-child(3) {
-  animation-delay: 1.9s;
-}
-
-/* Floating starts AFTER slide-up */
-.hero-socials a {
-  animation-fill-mode: forwards;
-}
-
-.hero-socials a:nth-child(1) {
-  animation:
-    socialFadeUp 0.8s ease-out forwards,
-    socialFloat 4s ease-in-out infinite;
-  animation-delay: 1s, 0.8s;
-}
-
-.hero-socials a:nth-child(2) {
-  animation:
-    socialFadeUp 0.8s ease-out forwards,
-    socialFloat 4s ease-in-out infinite;
   animation-delay: 1.5s, 1.8s;
 }
 
 .hero-socials a:nth-child(3) {
-  animation:
-    socialFadeUp 0.8s ease-out forwards,
-    socialFloat 4s ease-in-out infinite;
-  animation-delay: 2s, 2.8s;
+  animation-delay: 1.9s, 2.8s;
 }
 
 /* Fade + slide up */
@@ -587,7 +569,6 @@ section {
 
 .about-image:active img {
   filter: blur(5px);
-  content: "samba";
 }
 
 .about-text {
@@ -597,8 +578,8 @@ section {
 }
 
 .about-text a {
-  color: blue;
-  text-decoration: none;
+  color: var(--primary);
+  text-decoration: underline;
 }
 
 .highlight {
@@ -654,6 +635,16 @@ section {
 .info-card strong {
   color: var(--text-main);
   font-size: 0.95rem;
+}
+
+.info-card strong a {
+  color: inherit;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.info-card strong a:hover {
+  color: var(--primary);
 }
 
 /* ===== Stats Section ===== */
@@ -734,20 +725,6 @@ section {
   .stats-card {
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
-    padding: 15px 5px;
-  }
-
-  .stat-number {
-    font-size: 1.5rem;
-  }
-
-  .stat-label {
-    font-size: 0.75rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .stats-card {
     padding: 10px 5px;
   }
 
@@ -788,24 +765,32 @@ section {
   margin: 0 auto;
 }
 
-.grid {
+.skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+@media (min-width: 1025px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .skill-box {
-  background: var(--bg-card);
-  padding: 2rem;
-  border-radius: 16px;
-  border: 1px solid var(--glass-border);
-  transition: var(--transition);
+  background: rgba(15, 23, 42, 0.8);
+  padding: 1.5rem 2rem;
+  border-radius: 20px;
+  border: 1px solid rgba(148, 163, 184, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 .skill-box:hover {
   border-color: var(--primary);
-  transform: scale(1.02);
-  box-shadow: var(--card-shadow);
+  transform: translateY(-5px);
+  background: rgba(15, 23, 42, 0.9);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
 }
 
 .skill-header {
@@ -822,15 +807,16 @@ section {
 }
 
 .icon {
-  width: 40px;
-  height: 40px;
+  width: 48px;
+  height: 48px;
   background: rgba(34, 211, 238, 0.1);
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 8px;
+  border-radius: 12px;
   color: var(--primary);
-  font-weight: 700;
+  font-size: 1.4rem;
+  box-shadow: inset 0 0 10px rgba(34, 211, 238, 0.05);
 }
 
 .skill-name {
@@ -845,18 +831,20 @@ section {
 }
 
 .skill-bar {
-  height: 8px;
-  background: rgba(15, 23, 42, 0.8);
-  border-radius: 10px;
+  height: 10px;
+  background: rgba(15, 23, 42, 1);
+  border-radius: 20px;
   overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .skill-bar span {
   display: block;
   height: 100%;
-  background: linear-gradient(90deg, var(--primary), #0ea5e9);
+  background: linear-gradient(90deg, #22d3ee, #0ea5e9);
   width: 0;
   transition: width 1.5s cubic-bezier(0.19, 1, 0.22, 1);
+  box-shadow: 0 0 15px rgba(34, 211, 238, 0.4);
 }
 
 .tools-section {
@@ -1230,11 +1218,11 @@ section {
 }
 
 .timeline-item.left .meta {
-  justify-content: flex;
+  justify-content: flex-start;
 }
 
 .timeline-item.left .skills {
-  justify-content: flex;
+  justify-content: flex-start;
 }
 
 .exp-card:hover {
@@ -1308,12 +1296,11 @@ section {
     gap: 0.5rem;
     align-items: flex-start;
   }
+
   .timeline-item.left .meta {
     justify-content: flex-start;
   }
 }
-
-
 
 /* =========================================
    CERTIFICATIONS SECTION
@@ -1321,6 +1308,8 @@ section {
 
 .certifications {
   padding: 100px 5%;
+  position: relative;
+  z-index: 5;
 }
 
 .cert-header {
@@ -1338,57 +1327,74 @@ section {
 
 .cert-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  position: relative;
+  z-index: 6;
+}
+
+@media (min-width: 1025px) {
+  .cert-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .cert-card {
-  background: rgba(15, 23, 42, 0.4);
-  padding: 1.75rem;
+  background: rgba(15, 23, 42, 0.8);
+  padding: 1.5rem;
   border-radius: 16px;
-  border: 1px solid rgba(148, 163, 184, 0.08);
-  display: flex;
-  gap: 1.5rem;
-  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  display: flex !important;
+  gap: 1.25rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
-  align-items: flex-start;
+  align-items: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  visibility: visible !important;
+  opacity: 1 !important;
 }
 
 .cert-card:hover {
   border-color: var(--primary);
   transform: translateY(-5px);
+  background: rgba(15, 23, 42, 0.6);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
 }
 
 .cert-icon {
-  width: 56px;
-  height: 56px;
-  border-radius: 12px;
+  width: 64px;
+  height: 64px;
+  border-radius: 14px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   flex-shrink: 0;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .cert-icon.blue {
-  background: rgba(34, 211, 238, 0.1);
-  color: var(--primary);
+  background: linear-gradient(135deg, #0ea5e9, #2563eb);
+  color: #fff;
 }
 
 .cert-icon.green {
-  background: rgba(34, 197, 94, 0.1);
-  color: var(--accent);
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: #fff;
 }
 
 .cert-icon.purple {
-  background: rgba(168, 85, 247, 0.1);
-  color: #a855f7;
+  background: linear-gradient(135deg, #a855f7, #7c3aed);
+  color: #fff;
 }
 
 .cert-icon.orange {
-  background: rgba(251, 146, 60, 0.1);
-  color: #fb923c;
+  background: linear-gradient(135deg, #fb923c, #ea580c);
+  color: #fff;
+}
+
+.cert-icon.red {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  color: #fff;
 }
 
 .cert-content h3 {
@@ -1417,9 +1423,11 @@ section {
 
 .verified {
   position: absolute;
-  top: 1.5rem;
-  right: 1.5rem;
-  color: var(--accent);
+  top: 1.25rem;
+  right: 1.25rem;
+  color: #00ffd5;
+  font-size: 1.2rem;
+  filter: drop-shadow(0 0 5px rgba(0, 255, 213, 0.3));
 }
 
 /* =========================================
@@ -1451,6 +1459,16 @@ section {
 
 .contact-info .info-card {
   margin-bottom: 1.5rem;
+}
+
+.contact-info .info-card a {
+  color: var(--text-main);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.contact-info .info-card a:hover {
+  color: var(--primary);
 }
 
 .socials {
@@ -1601,9 +1619,6 @@ section {
   color: #fff;
 }
 
-.cyan-text {
-  color: #22d3ee;
-}
 
 .footer-description {
   font-size: 0.95rem;
@@ -1691,7 +1706,31 @@ section {
 }
 
 .heart {
-  color: #ef4444;
+  color: #ff4d4d;
+  display: inline-block;
+  animation: heartBeat 1.5s ease-in-out infinite;
+}
+
+@keyframes heartBeat {
+  0% {
+    transform: scale(1);
+  }
+
+  15% {
+    transform: scale(1.3);
+  }
+
+  30% {
+    transform: scale(1);
+  }
+
+  45% {
+    transform: scale(1.15);
+  }
+
+  60% {
+    transform: scale(1);
+  }
 }
 
 .back-to-top {
@@ -1901,4 +1940,113 @@ section {
   100% {
     transform: translate(0, 0) rotate(0deg);
   }
+}
+
+/* Background Blobs */
+.bg-blobs {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.blob {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, var(--primary-glow) 0%, transparent 70%);
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.15;
+  animation: blob-float 25s infinite alternate ease-in-out;
+}
+
+.blob-1 {
+  top: -10%;
+  left: -10%;
+  background: radial-gradient(circle, rgba(34, 211, 238, 0.2) 0%, transparent 70%);
+}
+
+.blob-2 {
+  bottom: -10%;
+  right: -10%;
+  background: radial-gradient(circle, rgba(14, 165, 233, 0.2) 0%, transparent 70%);
+  animation-delay: -5s;
+}
+
+.blob-3 {
+  top: 40%;
+  left: 30%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(34, 197, 94, 0.1) 0%, transparent 70%);
+  animation-delay: -10s;
+}
+
+@keyframes blob-float {
+  0% {
+    transform: translate(0, 0) scale(1) rotate(0deg);
+  }
+
+  33% {
+    transform: translate(100px, 100px) scale(1.1) rotate(60deg);
+  }
+
+  66% {
+    transform: translate(-50px, 150px) scale(0.9) rotate(120deg);
+  }
+
+  100% {
+    transform: translate(0, 0) scale(1) rotate(0deg);
+  }
+}
+
+/* Card Floating Animation */
+@keyframes cardFloat {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.skill-box,
+.cert-card,
+.project-card,
+.exp-card {
+  animation: cardFloat 6s ease-in-out infinite;
+}
+
+.skill-box:nth-child(even),
+.cert-card:nth-child(even),
+.project-card:nth-child(even),
+.exp-card:nth-child(even) {
+  animation-duration: 8s;
+  animation-delay: -1s;
+}
+
+.skill-box:nth-child(3n),
+.cert-card:nth-child(3n),
+.project-card:nth-child(3n),
+.exp-card:nth-child(3n) {
+  animation-duration: 7s;
+  animation-delay: -3s;
+}
+
+/* Ensure hover overrides animation or works with it */
+.skill-box:hover,
+.cert-card:hover,
+.project-card:hover,
+.exp-card:hover {
+  animation-play-state: paused;
 }

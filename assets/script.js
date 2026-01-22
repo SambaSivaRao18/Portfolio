@@ -50,24 +50,27 @@ heroTl.from(".name", { y: 50, opacity: 0, duration: 1, ease: "power4.out" })
   .from(".role", { y: 30, opacity: 0, duration: 0.8, ease: "power3.out" }, "-=0.6")
   .from(".home-text", { y: 20, opacity: 0, duration: 0.8 }, "-=0.6")
   .from(".home-buttons", { y: 20, opacity: 0, duration: 0.8 }, "-=0.6")
-  .from(".social-icons a", { y: 10, opacity: 0, stagger: 0.1, duration: 0.5 }, "-=0.4")
+  .from(".hero-socials a", { y: 10, opacity: 0, stagger: 0.1, duration: 0.5 }, "-=0.4")
   .from(".home-image", { scale: 0.8, opacity: 0, duration: 1.2, ease: "elastic.out(1, 0.5)" }, "-=1");
 
 // Section Reveal Animations
 const sections = document.querySelectorAll('section');
 sections.forEach(section => {
-  gsap.from(section.querySelectorAll('.badge, h1, h2, .about-text, .project-card, .exp-card, .cert-card, .contact-info, .contact-form'), {
-    scrollTrigger: {
-      trigger: section,
-      start: "top 80%",
-      toggleActions: "play none none none"
-    },
-    y: 50,
-    opacity: 0,
-    duration: 0.8,
-    stagger: 0.1,
-    ease: "power2.out"
-  });
+  const animatedElements = section.querySelectorAll('.badge, h1, h2, .about-text, .project-card, .exp-card, .cert-card, .contact-info, .contact-form');
+  if (animatedElements.length > 0) {
+    gsap.from(animatedElements, {
+      scrollTrigger: {
+        trigger: section,
+        start: "top 85%",
+        toggleActions: "play none none none"
+      },
+      y: 30,
+      opacity: 0,
+      duration: 0.8,
+      stagger: 0.1,
+      ease: "power2.out"
+    });
+  }
 });
 
 // Skill Bars Animation
@@ -198,8 +201,8 @@ document.addEventListener("keydown", function (e) {
   if (
     e.ctrlKey &&
     (e.key === "u" || e.key === "U" ||
-     e.key === "s" || e.key === "S" ||
-     e.key === "i" || e.key === "I")
+      e.key === "s" || e.key === "S" ||
+      e.key === "i" || e.key === "I")
   ) {
     e.preventDefault();
   }

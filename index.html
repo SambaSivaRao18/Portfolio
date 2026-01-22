@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <title>Samba | Cybersecurity Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="Content-Security-Policy" content="
       default-src 'self';
       style-src 'self' 'unsafe-inline'
@@ -18,7 +18,6 @@
         https://cdnjs.cloudflare.com
         https://unpkg.com;
       img-src 'self' data:;">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta name="description"
     content="Cybersecurity Specialist Portfolio - Vulnerability Assessment, Malware Analysis, Secure Tool Development">
   <link rel="icon" type="image/png" href="assets/favicon.png">
@@ -41,10 +40,17 @@
   <!-- Floating Icons Container -->
   <div id="floating-icons" class="floating-icons-container" aria-hidden="true"></div>
 
+  <!-- Background Blobs -->
+  <div class="bg-blobs" aria-hidden="true">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
+
   <!-- NAVBAR -->
   <header class="navbar" role="banner">
     <div class="logo" aria-label="Portfolio Logo">
-      <span class="logo-shield" aria-hidden="true">🛡️</span> Samba<span class="logo-dot"></span>
+      <span class="logo-shield" aria-hidden="true">🛡️</span> Samba<span class="logo-dot">.</span>
     </div>
 
     <nav class="nav-container" aria-label="Main Navigation">
@@ -53,7 +59,7 @@
         <li><a href="#about" class="nav-link">About</a></li>
         <li><a href="#skills" class="nav-link">Skills</a></li>
         <li><a href="#projects" class="nav-link">Projects</a></li>
-        <li><a href="#experiences" class="nav-link">Experience</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
         <li><a href="#certifications" class="nav-link">Certifications</a></li>
         <li><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
@@ -80,13 +86,13 @@
         </h3>
 
         <h3 class="role">
-          <span>&gt;</span> Cybersecurity Specialist <span style="color: red;">(Red Team)</span>
+          <span>&gt;</span> Cybersecurity Specialist <span class="red-text">(Red Team)</span>
         </h3>
 
         <p class="home-text">
           I break things to make them stronger. Specializing in
           <span>vulnerability testing</span>,
-          <span>Web App Pentesting</span>,
+          <span>Web App Penetration</span>,
           <span>malware analysis</span> and
           <span>secure tool development</span>.
           <br /><br />
@@ -182,7 +188,8 @@
             <span class="info-icon"><i class="fas fa-envelope"></i></span>
             <div>
               <small>EMAIL</small>
-              <strong class="dynamic-email-text"></strong>
+              <strong><a href="javascript:void(0)" class="dynamic-email-link dynamic-email-text"
+                  title="Email Address"></a></strong>
             </div>
           </div>
 
@@ -190,7 +197,8 @@
             <span class="info-icon"><i class="fas fa-phone"></i></span>
             <div>
               <small>PHONE</small>
-              <strong class="dynamic-phone-text"></strong>
+              <strong><a href="javascript:void(0)" class="dynamic-phone-link dynamic-phone-text"
+                  title="Phone Number"></a></strong>
             </div>
           </div>
 
@@ -246,7 +254,7 @@
       </p>
     </div>
 
-    <div class="grid">
+    <div class="skills-grid">
 
       <div class="skill-box">
         <div class="skill-header">
@@ -277,6 +285,19 @@
       <div class="skill-box">
         <div class="skill-header">
           <div class="skill-left">
+            <span class="icon">&lt;/&gt;</span>
+            <span class="skill-name">HTML5 / CSS3 / JavaScript</span>
+          </div>
+          <span class="skill-percent">90%</span>
+        </div>
+        <div class="skill-bar">
+          <span style="width:0%"></span>
+        </div>
+      </div>
+
+      <div class="skill-box">
+        <div class="skill-header">
+          <div class="skill-left">
             <span class="icon">☕</span>
             <span class="skill-name">Java</span>
           </div>
@@ -287,7 +308,7 @@
         </div>
       </div>
 
-     <div class="skill-box">
+      <div class="skill-box">
         <div class="skill-header">
           <div class="skill-left">
             <span class="icon">🐧</span>
@@ -299,7 +320,7 @@
           <span style="width:0%"></span>
         </div>
       </div>
-    
+
 
       <div class="skill-box">
         <div class="skill-header">
@@ -340,31 +361,7 @@
         </div>
       </div>
 
-      <div class="skill-box">
-        <div class="skill-header">
-          <div class="skill-left">
-            <span class="icon">&lt;/&gt;</span>
-            <span class="skill-name">HTML5 / CSS</span>
-          </div>
-          <span class="skill-percent">90%</span>
-        </div>
-        <div class="skill-bar">
-          <span style="width:0%"></span>
-        </div>
-      </div>
 
-      <div class="skill-box">
-        <div class="skill-header">
-          <div class="skill-left">
-            <span class="icon">{ }</span>
-            <span class="skill-name">JavaScript</span>
-          </div>
-          <span class="skill-percent">80%</span>
-        </div>
-        <div class="skill-bar">
-          <span style="width:0%"></span>
-        </div>
-      </div>
     </div>
   </section>
 
@@ -386,7 +383,7 @@
       <span class="tool-pill">MobSF</span>
       <span class="tool-pill">Sandbox Labs</span>
       <span class="tool-pill">YARA tool</span>
-      <span class="tool-pill">Wireshark</span>      
+      <span class="tool-pill">Wireshark</span>
       <span class="tool-pill">OWASP ZAP</span>
       <span class="tool-pill">Hydra</span>
       <span class="tool-pill">John the Ripper</span>
@@ -494,7 +491,8 @@
         </p>
 
         <ul class="features">
-          <li class="note-dot">Developed strictly for educational and defensive research purposes, not deployed in real world environments.</li>
+          <li class="note-dot">Developed strictly for educational and defensive research purposes, not deployed in real
+            world environments.</li>
           <li>Analysis of keystroke capture techniques and corresponding defensive countermeasures.</li>
           <li>Security-focused research aimed at identifying and mitigating malicious input capture techniques.</li>
         </ul>
@@ -509,7 +507,7 @@
     </div>
   </section>
 
-  <!--futucr projects-->
+  <!-- future projects -->
   <section class="future-projects">
     <h2 class="section-title">Upcoming <span>Projects</span></h2>
 
@@ -560,7 +558,7 @@
       </p>
     </div>
 
-     <div class="timeline">
+    <div class="timeline">
 
       <!-- LEFT CARD: CyberWarLab -->
       <div class="timeline-item left">
@@ -600,7 +598,6 @@
         </div>
       </div>
 
-    <div class="timeline">
 
       <!-- RIGHT CARD -->
       <div class="timeline-item right">
@@ -695,12 +692,13 @@
       <!-- Certificate 1 -->
       <div class="cert-card">
         <div class="cert-icon blue">
-          🛡️
+          <i class="fas fa-shield-alt"></i>
         </div>
 
         <div class="cert-content">
           <h3>Ethical Hacker</h3>
-          <h4> <a href="https://www.credly.com/badges/ed3ab4d7-7268-4a6d-89d1-a07952524d5a" target="_blank">Cisco</a></h4>
+          <h4><a href="https://www.credly.com/badges/ed3ab4d7-7268-4a6d-89d1-a07952524d5a" target="_blank">Cisco</a>
+          </h4>
           <p>Comprehensive ethical hacking and penetration testing certification</p>
         </div>
 
@@ -710,30 +708,29 @@
       <!-- Certificate 2 -->
       <div class="cert-card">
         <div class="cert-icon green">
-          📜
+          <i class="fas fa-scroll"></i>
         </div>
 
         <div class="cert-content">
           <h3>NPTEL Certificate</h3>
-          <h4><a href="https://interncertify.com/a1-verified-certificate-original-samba-siva-rao/" target="_blank">NPTEL</a></h4>
+          <h4><a href="https://interncertify.com/a1-verified-certificate-original-samba-siva-rao/"
+              target="_blank">NPTEL</a></h4>
           <p>National Programme on Technology Enhanced Learning certification</p>
         </div>
 
         <span class="verified"><i class="fas fa-check-circle"></i></span>
       </div>
 
-      <!-- Certificate3 -->
+      <!-- Certificate 3 -->
       <div class="cert-card">
         <div class="cert-icon purple">
-          🧑🏼‍💼
+          <i class="fas fa-microscope"></i>
         </div>
 
         <div class="cert-content">
-          <h3>Wadhwani</h3>
-          <h4><a href="https://web.certificate.wfglobal.org/en/certificate?certificateId=694c102ce148b98d90046744"
-              target="_blank"> Wadhwani</a></h4>
-          <p>certificate signifies that the recipient has acquired basic knowledge of concepts related to the
-            employability curriculum.</p>
+          <h3>Malware Analysis Internship</h3>
+          <h4>SpyPro Solutions</h4>
+          <p>Hands-on malware analysis and threat detection training</p>
         </div>
 
         <span class="verified"><i class="fas fa-check-circle"></i></span>
@@ -742,13 +739,14 @@
       <!-- Certificate 4 -->
       <div class="cert-card">
         <div class="cert-icon orange">
-          🔬
+          <i class="fas fa-lock"></i>
         </div>
 
         <div class="cert-content">
-          <h3>Malware Analysis Internship</h3>
-          <h4>SpyPro Solutions</h4>
-          <p>Hands-on to identify malwares and mitigate threats using practical tools and techniques</p>
+          <h3>Cybersecurity Internship</h3>
+          <h4><a href="https://interncertify.com/a1-verified-certificate-original-samba-siva-rao/"
+              target="_blank">InternCertify</a></h4>
+          <p>Practical cybersecurity and vulnerability assessment certification</p>
         </div>
 
         <span class="verified"><i class="fas fa-check-circle"></i></span>
@@ -756,28 +754,28 @@
 
       <!-- Certificate 5 -->
       <div class="cert-card">
-        <div class="cert-icon orange">
-          🔐
+        <div class="cert-icon purple">
+          <i class="fas fa-user-graduate"></i>
         </div>
 
         <div class="cert-content">
-          <h3>Cybersecurity Internship</h3>
-          <h4><a href="https://interncertify.com/a1-verified-certificate-original-samba-siva-rao/" target="_blank">InternCertify</a><h4>        
-          <p>Practical Web App penetration testing. Covers real-world attacks, exploitation techniques by focused on hands-on testing</p>
+          <h3>Wadhwani</h3>
+          <h4><a href="https://web.certificate.wfglobal.org/en/certificate?certificateId=694c102ce148b98d90046744"
+              target="_blank">Wadhwani</a></h4>
+          <p>Acquired essential concepts related to the employability curriculum.</p>
         </div>
 
         <span class="verified"><i class="fas fa-check-circle"></i></span>
       </div>
 
-      <!-- Certificate 6: CyberWarLab -->
+      <!-- Certificate 6 -->
       <div class="cert-card">
         <div class="cert-icon red">
-          🏆
+          <i class="fas fa-trophy"></i>
         </div>
 
         <div class="cert-content">
           <h3>CyberWarLab Internship</h3>
-          <!--<span class="achievement-inline">🥈 2nd Place CTF</span>-->
           <h4>CyberWarLab</h4>
           <p>Offensive Security & VAPT with 2nd place achievement in CTF Challenge</p>
         </div>
@@ -809,7 +807,7 @@
           <span class="icon"><i class="fas fa-envelope"></i></span>
           <div>
             <small>Email</small>
-            <p class="dynamic-email-text"></p>
+            <p><a href="javascript:void(0)" class="dynamic-email-link dynamic-email-text" title="Email Address"></a></p>
           </div>
         </div>
 
@@ -817,7 +815,7 @@
           <span class="icon"><i class="fas fa-phone"></i></span>
           <div>
             <small>Phone</small>
-            <p class="dynamic-phone-text"></p>
+            <p><a href="javascript:void(0)" class="dynamic-phone-link dynamic-phone-text" title="Phone Number"></a></p>
           </div>
         </div>
 
@@ -889,7 +887,7 @@
                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
               </svg>
             </div>
-            <span class="logo-text">Samba<span class="cyan-text"></span></span>
+            <span class="logo-text">Samba<span class="logo-dot">.</span></span>
           </div>
           <p class="footer-description">
             Cybersecurity enthusiast with a strong focus on vulnerability assessment,
