@@ -107,8 +107,8 @@ section {
   z-index: 1001;
 }
 
-.logo-shield {
-  font-size: 1.25rem;
+.logo-hacker {
+  font-size: 2.25rem;
 }
 
 .logo-dot {
@@ -523,7 +523,7 @@ section {
 
 .about-hero {
   text-align: center;
-  padding: 80px 5% 40px;
+  padding: 40px 5% 4px;
 }
 
 .about-pill {
@@ -542,7 +542,7 @@ section {
 .about-hero-title {
   font-size: 3rem;
   font-weight: 800;
-  margin-bottom: 1rem;
+  margin-bottom: 0rem;
 }
 
 .about-hero-title span {
@@ -578,8 +578,8 @@ section {
 }
 
 .about-text a {
-  color: var(--primary);
-  text-decoration: underline;
+  color:blue;
+  text-decoration:dotted
 }
 
 .highlight {
